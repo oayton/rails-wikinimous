@@ -7,9 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar navbar-light bg-light">
+      <button type="button" class="btn btn-light"><%= link_to "WikAytonomous", root_path %></button>
+      <button type="button" class="btn btn-light"><%= link_to "New Article", new_article_path %></button>
+    </div>
+
+    <div class="col-sm-8 col-sm-offset-2 container100 container" id="beef">
+      <%= yield %>
+    </div>
   </body>
 </html>
